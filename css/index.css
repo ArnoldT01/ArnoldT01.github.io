@@ -16,7 +16,8 @@
 html,
 body {
     box-sizing: border-box;
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "System Default", sans-serif;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -279,6 +280,63 @@ section {
     .project-image-container {
         margin-left: 40px;
     }
+}
+
+/* about me section */
+
+.about-me {
+    padding: 4vh 10%;
+}
+
+.about-me b {
+    color: var(--tertiary-color);
+}
+
+.short-intro {
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 300;
+    letter-spacing: -0.02rem;
+    line-height: 1.4rem;
+    margin-bottom: 6vh;
+}
+
+.collapsible {
+    background-color: transparent;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 1px solid var(--border-grey);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: var(--secondary-color);
+    font-weight: 300;
+    float: right;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+    margin-bottom: 2vh;
+    color: var(--secondary-color);
 }
 
 /* footer */
