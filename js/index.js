@@ -1,3 +1,5 @@
+document.getElementById('year').textContent = new Date().getFullYear();
+
 function toggleMenu() {
     const menu = document.querySelector('.menu');
     const navOptions = document.querySelector('.nav-options');
