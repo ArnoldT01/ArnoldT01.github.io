@@ -235,31 +235,34 @@ section {
 }
 
 .projects {
-    display: none;
+    font-size: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .projects {
-        display: grid;
-        text-align: center;
-        align-items: center;
         font-size: 1.3rem;
-        position: relative;
     }
+}
 
-    .projects p {
-        margin: 0;
-    }
+.projects {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
 
-    .projects p::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 30px;
-        height: 1px;
-        background-color: #000;
-    }
+.projects p {
+    margin: 0;
+}
+
+.projects p::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: #000;
 }
 
 .section-details-line {
@@ -355,6 +358,32 @@ section {
     .reverse-layout .project-image-container {
         margin-left: 0;
         margin-right: 40px;
+    }
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.coming-soon-text {
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    background-image: url('/assets/images/coming-soon-text-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media screen and (min-width: 768px) {
+    .coming-soon-text {
+        font-size: 6rem;
     }
 }
 
