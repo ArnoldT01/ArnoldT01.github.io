@@ -95,33 +95,34 @@ header nav span {
 }
 
 .nav-options a {
+    position: relative;
     padding: 8px 15px;
     text-decoration: none;
     color: var(--tertiary-color);
     font-size: 1rem;
-    transition: background-color 0.3s ease;
 }
 
-.nav-options a.active {
-    position: relative;
-}
-
-.nav-options a.active::after {
+.nav-options a::after {
     content: '';
     position: absolute;
     bottom: 4px;
     left: 15%;
-    width: 40%;
+    width: 0%;
     height: 1px;
     background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-options a:hover::after {
+    width: 40%;
+}
+
+.nav-options a.active::after {
+    width: 40%;
 }
 
 .nav-options a:nth-last-child() {
     padding-bottom: 10px;
-}
-
-.nav-options a:hover {
-    background-color: var(--link-hover-grey);
 }
 
 .menu.active span:nth-child(1) {
