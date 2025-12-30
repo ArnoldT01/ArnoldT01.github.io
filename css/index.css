@@ -159,7 +159,7 @@ section {
 }
 
 .title {
-    color: #d6d6d6;
+    color: #cecece;
     font-size: 2rem;
     margin-bottom: 4vh;
     position: relative;
@@ -170,7 +170,7 @@ section {
     inset: 0 0 0 0;
     content: attr(data-content);
     z-index: 2;
-    -webkit-text-stroke: 1px #d6d6d6;
+    -webkit-text-stroke: 1px #8f8d8d;
     color: transparent;
 }
 
