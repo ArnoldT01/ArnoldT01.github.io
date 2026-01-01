@@ -669,3 +669,11 @@ section {
         border-right: 1px solid var(--border-grey);
     }
 }
+
+/* tech stack */
+.tech-stack-container {
+    color: #3F3F3F;
+    text-align: center;
+    word-spacing: 1rem;  
+    padding: 20px;
+}
