@@ -320,6 +320,12 @@ section {
     font-size: 1.1rem;
     margin-bottom: 10vh;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-work-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
 }
 
 .project-image-container {
@@ -418,6 +424,7 @@ section {
     background: #f5f5f5;
     border-radius: 8px;
     border: 3px solid #f5f5f5;
+    overflow: hidden;
 }
 
 .service-offered-title-container {
@@ -432,9 +439,19 @@ section {
 }
 
 .service-offered-card > p {
-    margin: 6px 0;
+    margin: 4px 0;
+    padding: 0 15px;
     font-size: .8rem;
+    line-height: 1.5;
     color: var(--text-muted, #555);
+}
+
+.service-offered-card > p:first-of-type {
+    padding-top: 12px;
+}
+
+.service-offered-card > p:last-of-type {
+    padding-bottom: 15px;
 }
 
 /* about me section */
@@ -672,8 +689,18 @@ section {
 
 /* tech stack */
 .tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px 10%;
+}
+
+.tech-tag {
+    background-color: #f3f5f5;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.82rem;
     color: #3F3F3F;
-    text-align: center;
-    word-spacing: 1rem;  
-    padding: 20px;
+    white-space: nowrap;
 }
