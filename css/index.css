@@ -704,3 +704,156 @@ section {
     color: #3F3F3F;
     white-space: nowrap;
 }
+
+/* dark mode */
+
+body.dark-mode {
+    background-color: #111;
+    color: #e8e8e8;
+}
+
+body.dark-mode header {
+    background-color: #111;
+}
+
+body.dark-mode .nav-options {
+    background-color: #111;
+}
+
+body.dark-mode .nav-options a {
+    color: #888;
+}
+
+body.dark-mode .nav-options a::after {
+    background-color: #e8e8e8;
+}
+
+body.dark-mode h4 {
+    color: #666;
+}
+
+body.dark-mode section {
+    border-bottom-color: #252525;
+}
+
+body.dark-mode .section-details {
+    border-bottom-color: #252525;
+}
+
+body.dark-mode .section-details p,
+body.dark-mode .section-details a {
+    color: #888;
+}
+
+body.dark-mode .projects p::before {
+    background-color: #555;
+}
+
+body.dark-mode .title {
+    color: #2a2a2a;
+}
+
+body.dark-mode .title::after {
+    -webkit-text-stroke: 1px #3a3a3a;
+}
+
+body.dark-mode .dev-name {
+    color: #d8d8d8;
+}
+
+body.dark-mode .dev-name::after {
+    -webkit-text-stroke: 2px #3a3a3a;
+}
+
+body.dark-mode .project-name {
+    color: #888;
+}
+
+body.dark-mode .project-phrase {
+    color: #c8c8c8;
+}
+
+body.dark-mode .tag {
+    background-color: #222;
+    color: #bbb;
+}
+
+body.dark-mode .view-work-btn {
+    background-color: #e8e8e8;
+    color: #111;
+}
+
+body.dark-mode .view-work-btn:hover {
+    background-color: #ccc;
+}
+
+body.dark-mode .project-image-container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .service-offered-card {
+    background: #1e1e1e;
+    border-color: #1e1e1e;
+}
+
+body.dark-mode .service-offered-title-container {
+    background-color: #161616;
+}
+
+body.dark-mode .service-offered-title {
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-offered-card > p {
+    color: #888;
+}
+
+body.dark-mode .short-intro {
+    color: #999;
+}
+
+body.dark-mode .about-me b {
+    color: #bbb;
+}
+
+body.dark-mode .collapsible {
+    color: #888;
+    border-bottom-color: #252525;
+}
+
+body.dark-mode .content {
+    color: #888;
+}
+
+body.dark-mode .content b {
+    color: #aaa;
+}
+
+body.dark-mode .tech-tag {
+    background-color: #222;
+    color: #bbb;
+}
+
+body.dark-mode .footer section {
+    border-right-color: #252525;
+}
+
+body.dark-mode .contact a {
+    color: #888;
+}
+
+body.dark-mode .copyright-text {
+    color: #e0e0e0;
+}
+
+body.dark-mode .closing-line {
+    color: #666;
+}
+
+@media screen and (min-width: 1230px) {
+    body.dark-mode header,
+    body.dark-mode main {
+        border-left-color: #252525;
+        border-right-color: #252525;
+    }
+}
