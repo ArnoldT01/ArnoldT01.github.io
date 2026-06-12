@@ -425,11 +425,36 @@ section {
     border-radius: 8px;
     border: 3px solid #f5f5f5;
     overflow: hidden;
+    cursor: default;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-offered-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: #e0e0e0;
 }
 
 .service-offered-title-container {
     background-color: white;
     padding: 15px 0;
+    position: relative;
+}
+
+.service-offered-title-container::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #aaa;
+    transition: transform 0.3s ease, color 0.2s ease;
+    line-height: 1;
+}
+
+.service-offered-card:hover .service-offered-title-container::after {
+    transform: rotate(45deg);
+    color: #555;
 }
 
 .service-offered-title {
@@ -439,19 +464,31 @@ section {
 }
 
 .service-offered-card > p {
-    margin: 4px 0;
+    margin: 0;
     padding: 0 15px;
     font-size: .8rem;
     line-height: 1.5;
     color: var(--text-muted, #555);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
 }
 
-.service-offered-card > p:first-of-type {
+.service-offered-card:hover > p {
+    max-height: 80px;
+    opacity: 1;
+    margin: 3px 0;
+}
+
+.service-offered-card:hover > p:first-of-type {
     padding-top: 12px;
+    margin-top: 0;
 }
 
-.service-offered-card > p:last-of-type {
+.service-offered-card:hover > p:last-of-type {
     padding-bottom: 15px;
+    margin-bottom: 0;
 }
 
 /* about me section */
@@ -796,8 +833,21 @@ body.dark-mode .service-offered-card {
     border-color: #1e1e1e;
 }
 
+body.dark-mode .service-offered-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: #2d2d2d;
+}
+
 body.dark-mode .service-offered-title-container {
     background-color: #161616;
+}
+
+body.dark-mode .service-offered-title-container::after {
+    color: #555;
+}
+
+body.dark-mode .service-offered-card:hover .service-offered-title-container::after {
+    color: #999;
 }
 
 body.dark-mode .service-offered-title {
