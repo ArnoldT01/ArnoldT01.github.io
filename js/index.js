@@ -24,7 +24,19 @@ function toggleColorMode(mode) {
         body.classList.add('light-mode');
         body.classList.remove('dark-mode');
     }
+
+    localStorage.setItem('colorMode', mode);
 }
+
+// Sync toggle icon with saved preference
+(function () {
+    if (localStorage.getItem('colorMode') === 'dark') {
+        const lightModeImg = document.querySelector('.color-mode-img');
+        const darkModeImg = document.querySelectorAll('.color-mode-img')[1];
+        if (lightModeImg) lightModeImg.classList.remove('active');
+        if (darkModeImg) darkModeImg.classList.add('active');
+    }
+}());
 
 // collapsible
 var coll = document.getElementsByClassName("collapsible");
