@@ -1,384 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnold Mavhunga - Full Stack Software Engineer</title>
-    <link rel="icon" type="image/x-icon" href="assets/icons/Favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arnold Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
 </head>
 <body>
 
-    <header>
-        <div class="logo-and-menu">
-            <a href="#" class="logo"><img src="assets/icons/Favicon-32x32.png" alt="logo"></a>
-            <nav class="menu" onclick="toggleMenu()">
-                <span class="nav-toggle"></span>
-                <span class="nav-toggle"></span>
-            </nav>
+  <!-- ─── Navigation ─── -->
+  <nav class="nav">
+    <a href="#home" class="nav-logo" aria-label="Home">
+      <img src="assets/logo.svg" alt="Arnold" height="36" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Experience</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book A Call &nbsp;↗</a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero" id="home">
+
+    <div class="hero-rail">
+      <span class="hero-side-label">Software Engineer</span>
+      <span class="hero-year">© <span id="hero-year"></span></span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Years of experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number corporate-years"></span>
+        <span class="stat-label">Corporate years</span>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-hello">Hello</h1>
+      <p class="hero-intro">— It's <b>Arnold</b>, a Full Stack Engineer</p>
+    </div>
+
+    <div class="hero-image">
+      <img src="model.png" alt="D.Nova – Designer" />
+    </div>
+
+    <div class="hero-bottom">
+      <span class="hero-scroll">Scroll down ↓</span>
+    </div>
+
+  </section>
+
+  <!-- ─── About ─── -->
+  <section class="about" id="about">
+    <div class="container about-grid reveal">
+      <div class="about-text">
+        <h2 class="about-heading">About Me</h2>
+        <p>I build robust, scalable web, mobile, and desktop applications with a focus on clean architecture, performance, and seamless user experiences. With 6+ years of self-directed learning and <span class="corporate-years"></span> years of corporate international experience, I deliver end-to-end solutions that combine smart problem-solving with efficient code.</p>
+        <div class="about-deco-arrow">
+          <svg viewBox="0 0 180 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 30 168 C 15 90 85 15 148 46" stroke="#9B9B97" stroke-width="7" stroke-linecap="round"/>
+            <path d="M 129 47 L 148 46 L 136 31" stroke="#9B9B97" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="nav-options">
-            <a href="#home-page">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#about-me">About</a>
-            <a href="#footer">Contact</a>
+      </div>
+
+      <div class="about-stat">
+        <span class="big-number">4+</span>
+        <p>Live products shipped across web, mobile &amp; desktop</p>
+        <div class="about-stat-img">
+          <img
+            src="./image.png"
+            alt="At work"
+          />
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="home-page" id="home-page">
-            <p class="title" data-content="Full Stack Software Engineer">Full Stack Software Engineer</p>
-            <p class="dev-name" data-content="Arnold Mavhunga">Arnold Mavhunga</p>
-            <div class="model"></div>
-        </section>
-
-        <div class="section-details home-page-section-details section-details-bigger">
-            <p><span class="section-details-line">|</span> &nbsp; Location : South Africa, GP, Pretoria <span>/</span> <a href="#about-me">More about me</a> &rarr;</p>
+      <div class="about-right">
+        <div class="about-small-photo">
+          <img
+            src="./image.png"
+            alt="Portrait"
+          />
+          <button class="circle-btn about-photo-btn" aria-label="View">↗</button>
         </div>
+        <ul class="about-bullets">
+          <li>
+            <span class="bullet-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#111" stroke-width="1.3"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>With 6+ years of hands-on engineering,</strong> I specialise in full stack development — from .NET &amp; C# backends to React &amp; React Native frontends — with a mobile-first mindset and strong focus on clean, modular architecture.
+            </div>
+          </li>
+          <li>
+            <span class="bullet-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#111" stroke-width="1.3"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <strong>I thrive in agile, collaborative environments,</strong> delivering solutions with comprehensive testing, DevOps practices, and seamless integrations — including AI-powered features.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <!-- personal projects -->
-        <div class="section-details section-details-bigger projects" id="projects">
-            <p>Featured Personal Projects</p>
+  <!-- ─── Latest Works ─── -->
+  <section class="works" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">● Portfolio</span>
+        <h2 class="section-heading">Latest Works</h2>
+      </div>
+
+      <div class="works-grid">
+        <article class="work-card reveal">
+          <div class="work-img">
+            <img src="./assets/projects-overview/container-inspector.png" alt="Container Inspector" />
+            <button class="circle-btn work-arrow" aria-label="View project" onclick="window.open('https://arnoldt01.github.io/container-inspector-website/', '_blank')">↗</button>
+          </div>
+          <div class="work-meta">
+            <p class="work-name">Container Inspector</p>
+            <span class="work-sub">UI/UX &amp; development ↗</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" style="--delay:.1s">
+          <div class="work-img">
+            <img src="./assets/projects-overview/champagne-website.png" alt="Champagne Website" />
+            <button class="circle-btn work-arrow" aria-label="View project" onclick="window.open('https://arnoldt01.github.io/champagnewebsite/', '_blank')">↗</button>
+          </div>
+          <div class="work-meta">
+            <p class="work-name">Champagne Website</p>
+            <span class="work-sub">Brand &amp; web presence ↗</span>
+          </div>
+        </article>
+
+        <article class="work-card reveal" id="work-card-3" style="--delay:.2s">
+          <div class="work-img">
+            <img src="./assets/projects-overview/resume-prime1.png" alt="Resume Prime" />
+            <button class="circle-btn work-arrow" aria-label="View project" onclick="window.open('https://arnoldmavhunga.github.io/resume-builder', '_blank')">↗</button>
+          </div>
+          <div class="work-meta">
+            <p class="work-name">Resume Prime</p>
+            <span class="work-sub">UI/UX &amp; development ↗</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="works-footer reveal">
+        <a href="#" class="muted-link">Check our More →</a>
+        <a href="#" class="text-link">→ View More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Final CTA ─── -->
+  <section class="final-cta" id="contact">
+    <div class="container final-cta-inner reveal">
+      <h2>Got a Vision? Let's Bring It to Life!</h2>
+      <p>I'm always excited to collaborate on new and innovative projects. Whether you're starting from scratch or need an experienced engineer to level up your stack.</p>
+      <a href="mailto:arnoldtee01@gmail.com" class="btn btn-white">Book A Call &nbsp;→</a>
+    </div>
+  </section>
+
+  <!-- ─── Tech Stack ─── -->
+  <div class="tech-marquee-section">
+    <div class="container">
+      <div class="section-header left reveal">
+        <span class="section-tag">● Stack</span>
+      </div>
+      <div class="tech-marquee-track">
+        <div class="tech-marquee-inner">
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">.NET</span>
+          <span class="tech-pill">C#</span>
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">React Native</span>
+          <span class="tech-pill">Blender</span>
+          <span class="tech-pill">Three.js</span>
+          <span class="tech-pill">Supabase</span>
+          <span class="tech-pill">Azure</span>
+          <span class="tech-pill">Clerk</span>
+          <span class="tech-pill">MAUI</span>
+          <span class="tech-pill">SQL</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Jest</span>
+          <span class="tech-pill">xUnit</span>
+          <span class="tech-pill">Bootstrap</span>
+          <span class="tech-pill">WordPress</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">Flowbite</span>
+          <span class="tech-pill">Svelte</span>
+          <span class="tech-pill">Blazor</span>
+          <span class="tech-pill">Razor Pages</span>
+          <span class="tech-pill">ReqnRoll</span>
+          <span class="tech-pill">SpecFlow</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Google Cloud</span>
+          <span class="tech-pill">Heroku</span>
+          <span class="tech-pill">Appwrite</span>
+          <span class="tech-pill">Git</span>
+          <span class="tech-pill">GitHub</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">PowerShell</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">Electron</span>
+          <!-- duplicate for seamless loop -->
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">.NET</span>
+          <span class="tech-pill">C#</span>
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">React Native</span>
+          <span class="tech-pill">Blender</span>
+          <span class="tech-pill">Three.js</span>
+          <span class="tech-pill">Supabase</span>
+          <span class="tech-pill">Azure</span>
+          <span class="tech-pill">Clerk</span>
+          <span class="tech-pill">MAUI</span>
+          <span class="tech-pill">SQL</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Jest</span>
+          <span class="tech-pill">xUnit</span>
+          <span class="tech-pill">Bootstrap</span>
+          <span class="tech-pill">WordPress</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">Flowbite</span>
+          <span class="tech-pill">Svelte</span>
+          <span class="tech-pill">Blazor</span>
+          <span class="tech-pill">Razor Pages</span>
+          <span class="tech-pill">ReqnRoll</span>
+          <span class="tech-pill">SpecFlow</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Google Cloud</span>
+          <span class="tech-pill">Heroku</span>
+          <span class="tech-pill">Appwrite</span>
+          <span class="tech-pill">Git</span>
+          <span class="tech-pill">GitHub</span>
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">PowerShell</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">Electron</span>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- image left template  -->
-        <section class="project-container">
-            <p class="project-name">Vibe Flix</p>
-            <p class="project-phrase">Elevate Your Movie Nights</p>
-            <div class="tags-button-image-container">
-                <div class="tags-and-calltoaction-container">
-                    <div class="tags">
-                        <p class="tag">Movie Explorer</p>
-                        <p class="tag">Trending Movies</p>
-                        <p class="tag">Upcoming Releases</p>
-                    </div>
-                    <div class="call-to-action">
-                        <button class="view-work-btn" onclick="window.open('https://arnoldt01.github.io/vibeflix', '_blank')">
-                            View Work
-                        </button>
-                    </div>
-                </div>
-                <div class="project-image-container">
-                    <img src="/assets/images/vibeflix.png" alt="vibeflix preview">
-                </div>
-            </div>
-        </section>
-
-        <!-- image right template  -->
-        <section class="project-container">
-            <p class="project-name">Champagne website</p>
-            <p class="project-phrase">Celebrate Every Moment: Elevating the Art of Champagne</p>
-            <div class="tags-button-image-container reverse-layout">
-                <div class="project-image-container">
-                    <img src="/assets/images/champagne-website.png" alt="vibeflix preview">
-                </div>
-                <div class="tags-and-calltoaction-container">
-                    <div class="tags">
-                        <p class="tag">Elegant Living</p>
-                        <p class="tag">Fine Wine</p>
-                    </div>
-                    <div class="call-to-action">
-                        <button class="view-work-btn" onclick="window.open('https://arnoldt01.github.io/champagnewebsite', '_blank')">
-                            View Work
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- image left template  -->
-        <section class="project-container">
-            <p class="project-name">Product Landing Page</p>
-            <p class="project-phrase">Crafted to Captivate. Built to Perform.</p>
-            <div class="tags-button-image-container">
-                <div class="tags-and-calltoaction-container">
-                    <div class="tags">
-                        <p class="tag">Product Landing Page</p>
-                        <p class="tag">Interactive Animations</p>
-                        <p class="tag">3D Model Integration</p>
-                        <p class="tag">Modern UI/UX</p>
-                        <p class="tag">Video-Driven Experience</p>
-                    </div>
-                    <div class="call-to-action">
-                        <button class="view-work-btn" onclick="window.open('https://arnoldt01.github.io/product-site-demo', '_blank')">
-                            View Work
-                        </button>
-                    </div>
-                </div>
-                <div class="project-image-container">
-                    <img src="/assets/images/product-site.png" alt="vibeflix preview">
-                </div>
-            </div>
-        </section>
-
-        <div class="section-details">
-            <a href="personal-projects/index.html">View all personal projects</a>
+  <!-- ─── Experience ─── -->
+  <section class="experience" id="services">
+    <div class="container">
+      <div class="exp-header reveal">
+        <div>
+          <span class="section-tag">● Experiences</span>
+          <h2 class="section-heading">Explore My Engineering<br>Journey</h2>
         </div>
-        <div class="section-details"></div>
-
-        <!-- clients projects -->
-        <div class="section-details section-details-bigger projects" id="clients-projects">
-            <p>Featured Clients Projects</p>
+        <div class="exp-header-right">
+          <p>Over 6+ years of self-directed learning and <span class="corporate-years"></span> years of corporate international experience, I've delivered full stack solutions across web, mobile, and desktop — working with diverse teams and clients globally.</p>
+          <a href="#contact" class="text-link">Book A Call →</a>
         </div>
+      </div>
 
-        <section class="coming-soon">
-            <p class="coming-soon-text">Coming Soon</p>
-        </section>
+      <div class="exp-list">
 
-        <div class="section-details">
-            <a href="clients-projects/index.html">View all clients projects</a>
-        </div>
-        <div class="section-details"></div>
+        <!-- <div class="exp-row reveal">
+          <div class="exp-company">
+            <span class="exp-name">Self-Directed, Remote</span>
+            <span class="exp-date">6+ Years Learning &amp; Building</span>
+          </div>
+          <div class="exp-role">Independent projects &amp; side builds across web, mobile &amp; desktop</div>
+          <div class="exp-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div> -->
 
-        <!-- about me -->
-        <div class="section-details section-details-bigger projects" id="about-me">
-            <p>About Me</p>
-        </div>
-
-        <section class="about-me">
-            <p class="short-intro"><b>Full Stack Software Engineer</b> with a passion for building robust, scalable web, mobile, and desktop applications. Focused on clean architecture, performance, and seamless user experiences. My <b>main tech</b> stack includes <b>.NET</b>, <b>C#</b>, and <b>Java</b>. I also love volunteering my skills to help others through tech.</p>
-            
-            <button class="collapsible">Background</button>
-            <div class="content">
-                <p>Ever since I can remember, I’ve been curious about how people interact with the world around them especially through technology. That curiosity grew into a passion for creating digital experiences that are both functional and user-friendly. As a Full Stack Developer with Over <b>6</b> years of self-directed learning complemented by more than <b>2+</b> years of corporate, international-level experience, I enjoy building end-to-end solutions that bring ideas to life. I combine problem-solving with clean, efficient code to deliver seamless web applications.</p>
-            </div>
-
-            <button class="collapsible">Engineering Philosophy</button>
-            <div class="content">
-                <p>As an engineer, I believe in creating thoughtful, user-centered solutions by focusing on clarity, scalability, and maintainability from the start. My process begins with a <b>mobile-first mindset</b>, ensuring that every experience is accessible and optimized for the devices people actually use. By starting with constraints, I’m able to design lean, performance-oriented interfaces that scale naturally to larger screens. Good design should serve the user first—and mobile-first development helps keep that priority clear.</p>
-                <br />
-                <p>I practice <b>agile development</b> with a strong emphasis on iteration and collaboration. I believe that progress is best achieved through small, incremental changes, validated by feedback and guided by clear goals. I integrate testing at every level—unit, integration, and end-to-end—to catch issues early and ensure reliability. To me, testing isn’t just about preventing bugs, but about building confidence in code and enabling fast, fearless deployments.</p>
-                <br />
-                <p>Underlying it all is a commitment to clean, well-structured <b>architecture</b>. Whether I’m designing APIs, managing state, or structuring front-end components, I strive to build systems that are modular, predictable, and easy to extend. I see engineering as a craft that balances speed with quality, innovation with stability. Every line of code is part of a larger system, and my goal is always to contribute in a way that’s thoughtful, robust, and human-centered.</p>
-            </div>
-
-            <button class="collapsible">Things I Love</button>
-            <div class="content">
-                <p>I find inspiration in the everyday world and the technologies that shape it. When I’m not coding, I’m probably diving into the year’s best sci-fi films, exploring immersive game worlds, or hunting down the best coffee spots in town. I'm a passionate movie enthusiast, an avid gamer who enjoys both competitive and story driven titles, and a self proclaimed coffee connoisseur. I also love experimenting with new technologies whether it's a new framework or a fresh API, I'm always building side projects just for the fun of it.</p>
-            </div>
-        </section>
-
-        <div class="section-details"></div>
-
-        <!-- services -->
-        <div class="section-details section-details-bigger projects" id="services">
-            <p>Services Offered</p>
-        </div>
-
-        <section class="services-offered-container">
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Web development</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Custom Website Development (Portfolio, Business, Landing Pages)</p>
-                    <p>Full Stack Web Applications (dashboard systems, SaaS platforms, admin portals)</p>
-                    <p>Responsive & Mobile-First UI/UX Design</p>
-                    <p>API Development & Integration (REST, GraphQL)</p>
-                    <p>Authentication Systems (JWT, OAuth, Firebase, Supabase, etc.)</p>
-                    <p>E-commerce Development (custom or Shopify integrations)</p>
-                    <p>CMS Development (headless or traditional)</p>
-                    <p>Website Optimization (speed, SEO, performance)</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Cross-Platform Mobile App Development</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Mobile App Design & Development ( React Native | Maui )</p>
-                    <p>App Prototyping & UI/UX Design</p>
-                    <p>Firebase / Supabase Mobile App Backend</p>
-                    <p>Push Notifications & Real-Time Features</p>
-                    <p>App Store & Google Play Deployment</p>
-                    <p>Maintenance & Feature Updates for existing apps</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Desktop Application Development</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Cross-Platform Desktop Apps (Windows, macOS, Linux)</p>
-                    <p>Electron App Development</p>
-                    <p>Desktop Apps linked with cloud backends (sync, offline-first, local storage)</p>
-                    <p>POS Systems, Business Tools, Productivity Applications</p>
-                    <p>Installers & Packaging Setup</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Backend, DevOps & Cloud Services</p>
-                </div>
-                <div class="service-card-content">
-                    <p>API Architecture & Development</p>
-                    <p>Database Design (SQL / NoSQL)</p>
-                    <p>Cloud Hosting & Deployment (AWS, Azure, Google Cloud, Vercel, Netlify)</p>
-                    <p>CI/CD Pipeline Setup</p>
-                    <p>Serverless Functions & Microservices</p>
-                    <p>Docker Containerization</p>
-                    <p>System Monitoring & Logging Setup</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">UI/UX & Product Design</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Wireframing & Prototyping (Figma)</p>
-                    <p>Responsive Layout Design</p>
-                    <p>Design System Creation</p>
-                    <p>Product Consulting & Feature Planning</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Maintenance, Support & Optimization</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Code Reviews & Refactoring</p>
-                    <p>Bug Fixing & Performance Tuning</p>
-                    <p>App Modernization (rewrite old apps using modern tech)</p>
-                    <p>Security Hardening & Best Practices</p>
-                    <p>Long-term Support Agreements</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">Integration Services</p>
-                </div>
-                <div class="service-card-content">
-                    <p>Payment Gateways</p>
-                    <p>Third-Party API Integrations</p>
-                    <p>CRM & ERP Integrations</p>
-                    <p>Maps, Location, Geospatial Integrations</p>
-                </div>
-            </div>
-
-            <div class="service-offered-card">
-                <div class="service-offered-title-container">
-                    <p class="service-offered-title">AI Integration</p>
-                </div>
-                <div class="service-card-content">
-                    <p>OpenAI</p>
-                    <p>Gemini</p>
-                    <p>Custom ML models</p>
-                </div>
-            </div>
-
-        </section>
-
-        <div class="section-details"></div>
-
-        <!-- tech stack -->
-         <div class="section-details section-details-bigger projects" id="tech-stack">
-            <p>Tech Stack</p>
-        </div>
-
-        <section class="tech-stack-container">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">.NET</span>
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">Blender</span>
-            <span class="tech-tag">Three.js</span>
-            <span class="tech-tag">Supabase</span>
-            <span class="tech-tag">Azure</span>
-            <span class="tech-tag">Clerk</span>
-            <span class="tech-tag">MAUI</span>
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Jest</span>
-            <span class="tech-tag">xUnit</span>
-            <span class="tech-tag">Bootstrap</span>
-            <span class="tech-tag">WordPress</span>
-            <span class="tech-tag">Tailwind CSS</span>
-            <span class="tech-tag">Flowbite</span>
-            <span class="tech-tag">Svelte</span>
-            <span class="tech-tag">Blazor</span>
-            <span class="tech-tag">Razor Pages</span>
-            <span class="tech-tag">ReqnRoll</span>
-            <span class="tech-tag">SpecFlow</span>
-            <span class="tech-tag">SQLite</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Google Cloud</span>
-            <span class="tech-tag">Heroku</span>
-            <span class="tech-tag">Appwrite</span>
-            <span class="tech-tag">Git</span>
-            <span class="tech-tag">GitHub</span>
-            <span class="tech-tag">Figma</span>
-            <span class="tech-tag">PowerShell</span>
-            <span class="tech-tag">Linux</span>
-            <span class="tech-tag">Electron</span>
-        </section>
-
-        <div class="section-details"></div>
-
-        <!-- experience -->
-        <div class="section-details section-details-bigger projects" id="experience">
-            <p>Experience</p>
+        <div class="exp-row reveal">
+          <div class="exp-company">
+            <span class="exp-name">Full stack software engineer Intern</span>
+            <span class="exp-org">Whakatau B.V</span>
+            <span class="exp-location">Pretoria, South Africa</span>
+          </div>
+          <div class="exp-date-block" data-start="2023-09" data-end="2025-08">
+            <span class="exp-date">● Sept 2023 – August 2025</span>
+            <span class="exp-duration"></span>
+          </div>
         </div>
 
-        <section class="coming-soon">
-            <p class="coming-soon-text">Coming Soon</p>
-        </section>
-
-        <div class="section-details"></div>
-
-        <!-- education -->
-        <div class="section-details section-details-bigger projects" id="education">
-            <p>Education</p>
+        <div class="exp-row reveal">
+          <div class="exp-company">
+            <span class="exp-name">Full stack software engineer</span>
+            <span class="exp-org">Whakatau B.V</span>
+            <span class="exp-location">Pretoria, South Africa</span>
+          </div>
+          <div class="exp-date-block" data-start="2025-09">
+            <span class="exp-date">● Sept 2025 – Present</span>
+            <span class="exp-duration"></span>
+          </div>
         </div>
 
-        <section class="coming-soon">
-            <p class="coming-soon-text">Coming Soon</p>
-        </section>
+        <!-- Featured row -->
+        <div class="exp-row exp-featured reveal">
+          <div class="exp-company">
+            <span class="exp-name">Volunteer Full Stack Software Engineer</span>
+            <span class="exp-org">The Precious Tokens Foundation</span>
+            <span class="exp-location">Remote</span>
+          </div>
+          <div class="exp-date-block" data-start="2022-01" data-end="2023-08">
+            <span class="exp-date">● Jan 2022 – Aug 2023</span>
+            <span class="exp-duration"></span>
+          </div>
+          <button class="circle-btn" aria-label="View project" onclick="document.getElementById('work-card-3').scrollIntoView({behavior:'smooth'})">↗</button>
+        </div>
 
-        <div class="section-details section-details-bigger"></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- footer -->
-        <section class="footer" id="footer">
+  <!-- ─── Portfolio Marquee ─── -->
+  <section class="marquee-section">
+    <div class="container">
+      <div class="section-header left reveal">
+        <span class="section-tag">● More Projects</span>
+      </div>
+    </div>
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <!-- first set -->
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+        <div class="marquee-card">
+          <div class="marquee-img"><div class="img-placeholder">Coming Soon</div></div>
+          <p>Coming Soon &nbsp;<span>Coming soon</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <section class="contact">
-                <h4>Contact</h4>
-                <p><a href="https://www.linkedin.com/in/arnold-mavhunga-441880324/">LinkedIn</a> &rarr;</p>
-                <p><a href="#">Mail</a> &rarr;</p>
-                <p><a href="https://github.com/arnoldt01">Github</a> &rarr;</p>
-            </section>
+  <!-- ─── CTA Banner ─── -->
+  <section class="cta-banner">
+    <div class="cta-noise"></div>
+    <div class="container cta-inner">
+      <span class="section-tag">Let's Build Something Great!</span>
+      <h2>Got a project in mind? Let's<br>make it happen.</h2>
+      <p>I'm available for freelance and contract work. Whether you need a full stack web app, a mobile experience, or backend infrastructure — I bring clean code and real results.</p>
+      <a href="#contact" class="btn btn-dark">Book A Call &nbsp;→</a>
+    </div>
+  </section>
 
-            <section class="copyright">
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="assets/logo.svg" alt="Arnold" height="36" />
+        </div>
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Experience</a></li>
+        </ul>
+      </div>
 
-                <div class="color-mode">
-                    <span><img src="assets/images/brightness.png" class="color-mode-img active" onclick="toggleColorMode('light')"/></span>
-                    <span><img src="assets/images/moon.png" alt="dark" class="color-mode-img" onclick="toggleColorMode('dark')"/></span>
-                </div>
+      <!-- <a href="mailto:arnoldtee01@gmail.com" class="footer-email">arnoldtee01@gmail.com</a> -->
 
-                <p class="copyright-text">&copy; <span id="year"></span> Arnold Mavhunga. All Rights Reserved.</p>
-                <p class="closing-line">Made with <span>&hearts;</span> and coffee with very little sugar.</p>
-            </section>
+      <ul class="footer-social">
+        <li><a href="https://github.com/arnoldt01" target="_blank" aria-label="GitHub">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/arnold-mavhunga-441880324/" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
 
-            <section class="logo">
-                <p><img src="assets/icons/Favicon-32x32.png" alt="logo"></p>
-            </section>
+    </div>
+  </footer>
 
-        </section>
-
-    </main>
-
-    <script src="js/theme.js"></script>
-    <script src="js/index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
