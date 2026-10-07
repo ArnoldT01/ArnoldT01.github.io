@@ -885,7 +885,11 @@ ul { list-style: none; }
   /* Mobile nav open state */
   .nav.open .nav-links {
     display: flex; flex-direction: column;
-    position: fixed; inset: 0; top: var(--nav-h);
+    /* .nav's backdrop-filter makes it the containing block, so size explicitly */
+    position: fixed; left: 0; right: 0; top: var(--nav-h);
+    height: calc(100vh - var(--nav-h));
+    height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
     background: #EDEDEA;
     padding: 40px 20px;
     gap: 24px; font-size: 20px;
