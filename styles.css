@@ -60,9 +60,6 @@ ul { list-style: none; }
   margin-bottom: 56px;
 }
 .section-header.left { text-align: left; }
-.more-projects-header {
-  display: flex; justify-content: space-between; align-items: center;
-}
 
 .tag {
   display: inline-block;
@@ -744,6 +741,7 @@ ul { list-style: none; }
 .works-footer {
   display: flex; justify-content: flex-end; align-items: center;
 }
+.more-projects-footer { margin-top: 32px; }
 
 
 /* ════════════════════════════════
