@@ -739,7 +739,7 @@ ul { list-style: none; }
 .work-sub  { font-size: 12px; color: var(--muted); }
 
 .works-footer {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: flex-end; align-items: center;
 }
 
 
