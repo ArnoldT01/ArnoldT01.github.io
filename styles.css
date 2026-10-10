@@ -60,6 +60,9 @@ ul { list-style: none; }
   margin-bottom: 56px;
 }
 .section-header.left { text-align: left; }
+.more-projects-header {
+  display: flex; justify-content: space-between; align-items: center;
+}
 
 .tag {
   display: inline-block;
