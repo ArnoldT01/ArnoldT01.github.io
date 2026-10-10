@@ -5,6 +5,24 @@ document.querySelectorAll('.corporate-years').forEach(el => {
   el.textContent = `${CORPORATE_YEARS}+`;
 });
 
+/* ─── Tech stack (from API) ─── */
+const techInner = document.querySelector('.tech-marquee-inner');
+fetch('https://arnoldmavhunga.github.io/api/tech-stack/names.json')
+  .then(res => res.ok ? res.json() : Promise.reject(res.status))
+  .then(names => {
+    // render twice for a seamless loop
+    const pills = [...names, ...names].map(name => {
+      const pill = document.createElement('span');
+      pill.className = 'tech-pill';
+      pill.textContent = name;
+      return pill;
+    });
+    techInner.replaceChildren(...pills);
+  })
+  .catch(() => {
+    document.querySelector('.tech-marquee-section').hidden = true;
+  });
+
 /* ─── Experience durations ─── */
 document.querySelectorAll('.exp-date-block[data-start]').forEach(block => {
   const [sy, sm] = block.dataset.start.split('-').map(Number);
