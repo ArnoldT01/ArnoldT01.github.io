@@ -521,6 +521,8 @@ ul { list-style: none; }
   padding: 100px 0;
   background: var(--white);
 }
+.experience.open-source { padding-top: 0; }
+.open-source .exp-company { flex: 1; }
 
 .exp-header {
   display: grid;

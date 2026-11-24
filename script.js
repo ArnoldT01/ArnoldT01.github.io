@@ -35,6 +35,21 @@ document.querySelectorAll('.exp-date-block[data-start]').forEach(block => {
   block.querySelector('.exp-duration').textContent = label;
 });
 
+/* ─── Open source PR status (from GitHub API) ─── */
+// Each row has data-pr="owner/repo#number"; the text in the HTML stays as a fallback
+document.querySelectorAll('[data-pr]').forEach(row => {
+  const match = row.dataset.pr.match(/^([\w.-]+\/[\w.-]+)#(\d+)$/);
+  const status = row.querySelector('.exp-duration');
+  if (!match || !status) return;
+
+  fetch(`https://api.github.com/repos/${match[1]}/pulls/${match[2]}`)
+    .then(res => res.ok ? res.json() : Promise.reject(res.status))
+    .then(pr => {
+      status.textContent = pr.merged_at ? 'Merged' : pr.state === 'open' ? 'Open' : 'Closed';
+    })
+    .catch(() => {});
+});
+
 /* ─── Nav: scroll state & mobile toggle ─── */
 const nav = document.querySelector('.nav');
 const hamburger = document.querySelector('.nav-hamburger');
